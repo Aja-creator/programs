@@ -1,0 +1,32 @@
+class Cognizant:
+    company_name = "cognizant"
+    tax_percentage = 10
+    
+    def set_dim(self,name,age,salary,share_percentage):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.share_percentage = share_percentage
+        self.tax = 0
+        self.share = 0
+    def cal_tax(self):
+        self.tax = (self.salary * Cognizant.tax_percentage )
+    def cal_share(self):
+        self.share = (self.salary * self.share_percentage)
+    def display_info(self):
+        self.cal_tax()
+        self.cal_share()
+        print("Company:",Cognizant.company_name)
+        print("Name:",self.name)
+        print("Age:",self.age)
+        print("salary:",self.salary)
+        print("tax to pay:",self.tax)
+        print("share of the company:",self.share)
+ 
+emp1 = Cognizant()
+emp2 = Cognizant()
+emp1.set_dim("Raju",21,20000,5)
+emp2.set_dim("Ajas",22,30000,6)
+emp1.display_info()
+print("-------------------------")
+emp2.display_info()
